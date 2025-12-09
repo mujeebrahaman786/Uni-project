@@ -167,15 +167,15 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
-  max-width: 800px;
+  gap: 20px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 5px;
 }
 
 /* Style des cartes */
 .card {
-  flex: 0 1 calc(50% - 50px);   /* pour avoir deux elements per ligne */
+  flex: 0 0 calc(50% - 30px);   /* pour avoir deux elements per ligne */
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -186,7 +186,7 @@ main {
 
 .card img {
   width: 100%;
-  height: 190px;
+  height: 280px;
   object-fit:cover;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -200,6 +200,13 @@ main {
   font-family: 'Lucida Sans', sans-serif;
 }
 
+.card hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 2px;
+
+}
+
 .card p {
   font-size: 16px;
   color: #666;
@@ -207,35 +214,42 @@ main {
 }
 
 
-.final img {
-  position:relative;
-  margin-top: 20px;
-  margin-left: 20px;
-  width: 30%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
 
+.final{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 30px;
+
+}
+
+.final img {
+  border: none;
+  border-radius: 12px;
+  margin-top: 40px;
+  margin-left: 30px;
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
 }
 
 
 .final h2{
-  position:relative;
-  text-align: center;
-  margin: 1em auto 2em;
-  font-size: 28px;
-  font-weight: 700;
-  font-family: 'Lucida Sans', sans-serif;
-  
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 45px;
 }
 
 .final p{
-  position: relative;
-  font-size: 20px;
-  text-align: center;
-  
-
-
+  text-align:justify;
+  width: 100%;
+  height: auto;
+  font-size: 0px;
+  margin-left: 20px;
+  margin-right: 50px;
+  margin-top: 100px;
+  font-family:'Times New Roman', Times, serif;
 }
 
 
