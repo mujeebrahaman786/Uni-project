@@ -1,0 +1,284 @@
+* {                     /* pour met 0 en tout browsers par default */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+    background-color: rgb(252, 252, 252);
+    color: #000000; /* color noir pour mieux visibility */
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px; /* top-bottom 10px, left-right 20px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(70px) ;   /* Légère transparence pour voir le header */
+  flex-wrap: wrap;                          /* quand ont minimize header cette option aide en organize les option mieux */
+  z-index: 1000; /* sur que le header va etre toujour visible et en top */
+}
+
+.menu-logo img {
+  height: 50px; /* adjust as needed */
+  width: auto;
+}
+
+.Titre {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  flex: 1;
+  color: white;
+}
+
+nav {
+  display: flex; /* Added for proper alignment */
+  align-items: center;
+  gap: 30px;;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+
+}
+
+nav a:hover {
+  border-bottom: 3px solid #92E0E5;
+}
+
+main {
+  padding-top: 0 ;
+}
+
+/* COVER PHOTO SECTION - This is the container */
+.cover-photo {
+  position: relative; /* IMPORTANT: This makes it the positioning context */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;       /* il est 3 option en overflow hidden/auto/scroll */
+}
+
+/* cette partie est tres important si non notre page affiche tres bizzare */
+.cover-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  
+  /* 2nd option pour mieux affichage de page 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  */
+}
+
+/* COVER TEXT - MUST be inside .cover-photo in HTML */
+.cover_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers both horizontally and vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  width: 90%;
+}
+
+.centre-text {
+  font-size : 56px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  font-family: 'Times New Roman', Times, serif;
+
+  }
+
+  .centre-text-2 {
+  font-size : 32px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.4); /* makes text readable */  
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.get-started {
+  padding: 16px 40px;
+  position: absolute;
+  background-color: white;
+  color: black;
+  top: 63%;
+  left: 50%;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif ;
+  text-align: center;
+  align-items: center;
+  transform: translateX(-50%);  /* search to understand this */
+}
+
+.get-started:hover {
+  background-color: #E55A2B;
+  cursor: pointer;
+}
+
+.titre_2page h1 { 
+  margin-top: 40px;
+  font-size: 48px;
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.titre_2page p {
+  margin-top: 12px;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/**/
+
+/* Grid de destinations */
+.destinations-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 5px;
+}
+
+/* Style des cartes */
+.card {
+  flex: 0 0 calc(50% - 30px);   /* pour avoir deux elements per ligne */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit:cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+.card hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 2px;
+
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+.final{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 30px;
+
+}
+
+.final img {
+  border: none;
+  border-radius: 12px;
+  margin-top: 40px;
+  margin-left: 30px;
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+}
+
+
+.final h2{
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 45px;
+}
+	
+Add files via upload
+	
+last week
+
+.final p{
+  text-align:justify;
+  width: 100%;
+  height: auto;
+  font-size: 0px;
+  margin-left: 20px;
+  margin-right: 50px;
+  margin-top: 100px;
+  font-family:'Times New Roman', Times, serif;
+}
+
+
+
+
+.nav1 {
+
+  
+  text-align: center;
+  margin-left: 300px;
+  
+
+
+}
+  
+
+
+
+
+
+footer {
+  background-color: #2C3E50;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
